@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <title>India,Madhya Pradesh Neighbourhood project</title>
+   <link rel="stylesheet" href="css/style.css">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+   <h1 class="title">Welcome to neighbourhood Map</h1>
+   <div id="mySidenav" class="sidenav">
+      <div>
+         <label for="searchlocations">Location Finder</label>
+         <input type="text" name="search" placeholder="Search.." data-bind="textInput: searchTerm">
+      </div>
+      <a href="#" class="closebtn" onclick="closeNav()">&#9932;</a>
+
+
+      <div class="search-filterbox">
+         <div class="locationlist">
+            <ul class="results" data-bind="foreach: searchitems">
+
+               <li class="searchplace" data-bind="text: name,click:bounce"></li>
+
+
+            </ul>
+
+         </div>
+
+
+      </div>
+   </div>
+   <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+   <div id="map"></div>
+
+
+   <script src="js/lib/jquery-1.12.0.min.js"></script>
+   <script src="js/lib/knockout-3.4.0.js"></script>
+
+   <script src="js/app2.js"></script>
+   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAyn13pMxI-nRSBvItIUFP_7fTcOTxQGsc&libraries=places&v=3&callback=initMap" onerror="errorHandling()">
+   </script>
+</body>
+
+</html>
+
+
+     
+
+
